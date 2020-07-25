@@ -1,0 +1,13 @@
+version: '3.4'
+
+services:
+  redis:
+    image: redis:6.0.6-buster
+    ports:
+      - "16379:6379"
+    environment:
+      - ALLOW_EMPTY_PASSWORD=no
+      - REDIS_PASSWORD=sillyhat
+    volumes:
+      - $PWD/data:/data
+      - $PWD/config/redis.conf:/usr/local/etc/redis/redis.conf
