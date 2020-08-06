@@ -2,7 +2,7 @@
 
 ## 部署
 ```
-docker deploy -c docker-compose.yml sillyhat
+docker stack deploy -c docker-compose.yml sillyhat
 ```
 
 ## redis.conf
